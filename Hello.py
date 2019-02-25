@@ -17,11 +17,11 @@ def result():
 
 @app.route('/result2',methods = ['POST','GET'])
 def result2():
-   a=request.form.get('Another Number',type=int)
+   a=request.form.get('Another Number', type=int)
    sum_1=int(request.cookies.get('sum_1'))
    b=sum_1
    c=a+b
-   return render_template("result2.html",result1=str(c))
+   return render_template("result2.html",result1=str(a))
 
 if __name__ == '__main__':
    app.run(debug=True)
